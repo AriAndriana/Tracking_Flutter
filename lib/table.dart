@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/page1.dart'; 
 import 'package:http/http.dart' as http;
+import 'dart:async';
 import 'dart:convert';
 
 class Tabel extends StatelessWidget {
@@ -34,12 +35,13 @@ class Tabel extends StatelessWidget {
                         ],
                         rows: [
                           DataRow(cells: [
-                            DataCell(Text(snapshot.data[index]['Name'])),
+                            DataCell(Text(snapshot.data[index]['Provinsi'])),
                             DataCell(Text(snapshot.data[index]['Kasus_Posi'])),
                             DataCell(Text(snapshot.data[index]['Kasus_Semb'])),
                             DataCell(Text(snapshot.data[index]['Kasus_Meni']))
-                          ]),
-                        ),
+                            ]
+                          ),
+                        ]),
                       ],
                     ),
                   );
@@ -48,7 +50,7 @@ class Tabel extends StatelessWidget {
             }
             else {
               return Center(
-                child: CircularProgressIndicator(),
+                child: Text('Failed!'),
               );
             }
           }
