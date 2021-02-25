@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget/page1.dart'; 
+import 'package:flutter_widget/page2.dart'; 
 
 class TabelGlobal extends StatelessWidget {
   @override
@@ -43,7 +43,7 @@ class TabelGlobal extends StatelessWidget {
           color: Colors.blueAccent,
           onPressed: () {
             Navigator.pop(context);
-            MaterialPageRoute(builder: (context) => Page1());
+            MaterialPageRoute(builder: (context) => Page2());
           },
         ),
         ),
